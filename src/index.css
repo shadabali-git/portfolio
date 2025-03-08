@@ -12,6 +12,12 @@
     font-weight: bold;
     font-style: normal;
 }
+@font-face {
+    font-family: 'I';
+    src: url('/src/assets/font/InstrumentSans.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 .font-coolvetica {
     font-family: 'Coolvetica Condensed', sans-serif;
@@ -19,4 +25,7 @@
 
 .font-coolvetica-bold {
     font-family: 'Coolvetica Bold', sans-serif;
+}
+.font-instrument {
+    font-family: 'I', sans-serif;
 }

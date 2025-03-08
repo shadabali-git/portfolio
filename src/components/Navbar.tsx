@@ -105,27 +105,7 @@ const Navbar = () => {
 
                     </div>
                 </NavLink>
-                <NavLink
-                    to="/extra"
-                    className="group text-white flex flex-col justify-center items-center text-2xl font-medium leading-8 no-underline"
-                >
-                    <div className="relative flex flex-col h-6 overflow-hidden">
-                        <div
-                            className="flex items-center justify-center w-full h-full transition-transform duration-300 ease-in group-hover:-translate-y-full">
-                            Blog
-                        </div>
 
-                        <div
-                            className="flex items-center justify-center w-full h-full transition-transform duration-200 ease-in translate-y-0 group-hover:-translate-y-full">
-                            Blog
-                        </div>
-
-                    </div>
-                    <div
-                        className="w-0 mt-1 bg-white h-[1px] transition-all duration-400 ease-in group-hover:w-full">
-
-                    </div>
-                </NavLink>
 
 
 
@@ -158,12 +138,7 @@ const Navbar = () => {
                     >
                     Contact
                 </NavLink>
-                <NavLink
-                    to="/extra"
-                    className="group text-white flex flex-col justify-center items-center text-2xl font-medium leading-8 no-underline"
-                    >
-                    Blog
-                </NavLink>
+
             </div>}
         </div>
 

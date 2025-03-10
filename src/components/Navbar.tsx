@@ -1,5 +1,5 @@
 import logo from '../assets/logo.png';
-import {NavLink} from "react-router";
+import {NavLink,Link} from "react-router";
 import {useState} from "react";
 import { HiOutlineMenu ,HiOutlineMenuAlt3} from "react-icons/hi";
 
@@ -9,9 +9,9 @@ const Navbar = () => {
     return (
         <div>
         <nav className="px-10 bg-black h-20 flex justify-between items-center font-sans">
-            <div className="w-20 mt-4">
+            <Link to="/" className="w-20 mt-4">
                 <img src={logo} alt="shady" className="object-fill"/>
-            </div>
+            </Link>
             <div>
                 <div className="md:hidden">
                     <button className="text-white text-2xl" onClick={()=>setIsOpen((prev)=>!prev)}>

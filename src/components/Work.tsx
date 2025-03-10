@@ -1,5 +1,8 @@
 import {motion} from "framer-motion";
 import WorkCards from "../Items/WorkCards.tsx";
+import ChitChat from '../assets/Images/ChitChat.png'
+import TikTac from '../assets/Images/tiktac.png'
+import Github from '../assets/Images/github.png'
 
 const Work = () => {
     return (
@@ -29,14 +32,51 @@ const Work = () => {
                Work
             </motion.h1>
 
+            <div className="flex gap-5 flex-wrap">
+
             <WorkCards
-                src="https://images.unsplash.com/photo-1622838320000-4b3b3b3b3b3b"
+                src={ChitChat}
                 domain="Frontend"
-                skills="React, TailwindCSS, Framer Motion"
-                topic="Building a Portfolio"
+                skills="React Tailwind Firebase"
+                topic="Chat Application"
+                color="bg-blue-500"
 
 
             />
+
+            <WorkCards
+                src={TikTac}
+                domain="Backend"
+                skills="Express Jwt Socket.io"
+                topic="Realtime Game"
+                color="bg-neutral-400"
+
+
+            />
+                <WorkCards
+                    src="https://res.cloudinary.com/ddnum51yo/image/upload/v1729440679/LeetCode/logo.png"
+                    domain="Fullstack"
+                    skills="Express React MongoDB"
+                    topic="LeetCode Tracker"
+                    color="bg-cyan-400"
+
+
+                />
+                <WorkCards
+                    src={Github}
+                    domain="Web Development"
+                    skills="Vanilla JS"
+                    topic="First Year Project"
+                    color="bg-stone-500"
+
+
+                />
+
+            </div>
+
+            <div className="mb-20">
+
+            </div>
         </div>
     );
 }

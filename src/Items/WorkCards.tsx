@@ -6,8 +6,9 @@ interface WorkCardsProps {
     skills: string;
     topic: string;
     color: string;
+    projectLink: string;
 }
-const WorkCards:React.FC<WorkCardsProps> = ({src,domain,skills,topic,color}) => {
+const WorkCards:React.FC<WorkCardsProps> = ({src,domain,skills,topic,color,projectLink}) => {
     const [fallback, setFallback] = React.useState(src);
     return (
         <motion.div
@@ -47,6 +48,7 @@ const WorkCards:React.FC<WorkCardsProps> = ({src,domain,skills,topic,color}) => 
                 className="absolute cursor-pointer bottom-8 left-1/2 transform -translate-x-1/2 bg-blue-500 rotate-0 border-3 border-transparent transition-all hover:border-b-white hover:bg-blue-600 hover:border-white text-white font-semibold py-2 px-6"
                 initial={{rotate: 0}}
                 whileHover={{rotate: 3}}
+                onClick={() => window.open(projectLink)}
 
             >
                 VISIT

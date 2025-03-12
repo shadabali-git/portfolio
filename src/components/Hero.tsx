@@ -33,7 +33,7 @@ const Hero = () => {
                     (card as HTMLElement).style.transform = `translateY(${"-"+window.scrollY * speed}px)`;
                 }
                 else {
-                    speed *= 0.2;
+                    speed *= 0.3;
                 (card as HTMLElement).style.transform = `translateY(${window.scrollY * speed}px)`;
                 }
             });
@@ -43,7 +43,7 @@ const Hero = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
     return (
-        <div id="hero" className="text-white container h-[2000px] relative overflow-hidden">
+        <div id="hero" className="text-white h-[2000px] relative overflow-hidden">
 
 
             <div className="absolute left-2/4 top-1/6 parallax-card">
@@ -55,7 +55,7 @@ const Hero = () => {
             <div className="absolute top-1/2 left-1/6 parallax-card">
                 <Cards src={laptop} height="h-72"/>
             </div>
-            <div className="absolute left-[75%] top-[30%] parallax-card">
+            <div className="absolute left-[75%] top-0 parallax-card">
                 <Cards src={reacticon}/>
             </div>
             <div className="absolute left-1/6 top-[80%] parallax-card">

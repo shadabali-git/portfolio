@@ -11,6 +11,7 @@ const Work = () => {
             px-12
             flex flex-col justify-center items-center
             container
+            mx-auto
              `}>
             <motion.h1
                 className={`
@@ -32,7 +33,7 @@ const Work = () => {
                Work
             </motion.h1>
 
-            <div className="flex gap-5 flex-wrap">
+            <div className="flex gap-5 flex-wrap justify-center">
 
             <WorkCards
                 src={ChitChat}
@@ -40,6 +41,7 @@ const Work = () => {
                 skills="React Tailwind Firebase"
                 topic="Chat Application"
                 color="bg-blue-500"
+                projectLink="https://pr-24.d12opzx0r1e6rj.amplifyapp.com"
 
 
             />
@@ -50,6 +52,7 @@ const Work = () => {
                 skills="Express Jwt Socket.io"
                 topic="Realtime Game"
                 color="bg-neutral-400"
+                projectLink="https://express-authentication-henna.vercel.app"
 
 
             />
@@ -59,6 +62,7 @@ const Work = () => {
                     skills="Express React MongoDB"
                     topic="LeetCode Tracker"
                     color="bg-cyan-400"
+                    projectLink="https://leet-code-tool-eight.vercel.app"
 
 
                 />
@@ -68,6 +72,7 @@ const Work = () => {
                     skills="Vanilla JS"
                     topic="First Year Project"
                     color="bg-stone-500"
+                    projectLink="https://github.com/shadabali-git/1YearProjects"
 
 
                 />

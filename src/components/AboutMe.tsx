@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import {motion} from "framer-motion";
 import ProfileCards from "../Items/ProfileCards.tsx";
 
 const AboutMe = () => {
@@ -8,6 +8,7 @@ const AboutMe = () => {
             px-12
             flex flex-col justify-center items-center
             container
+            mx-auto
              `}>
             <motion.h1
                 className={`
@@ -29,8 +30,8 @@ const AboutMe = () => {
                 ABOUT
             </motion.h1>
 
-            <div className="flex justify-between text-2xl items-center mb-20 w-full">
-                <div className="w-1/2 text-left font-bold text-gray-700 font-instrument ">
+            <div className="flex justify-between text-2xl items-center mb-20 w-full mx-auto">
+                <div className="w-1/2 text-center font-bold text-gray-700 font-instrument ">
                     Name
                 </div>
                 <h1 className="font-instrument font-bold flex-1">
@@ -39,7 +40,7 @@ const AboutMe = () => {
             </div>
 
             <div className="flex justify-between text-2xl items-center mb-20 w-full">
-                <div className="w-1/2 text-left font-instrument font-bold text-gray-700  ">
+                <div className="w-1/2 text-center font-instrument font-bold text-gray-700  ">
                     Bio
                 </div>
                 <h1 className="font-instrument font-bold flex-1">
@@ -48,7 +49,7 @@ const AboutMe = () => {
                 </h1>
             </div>
             <div className="flex justify-between text-2xl items-center mb-20 w-full">
-                <div className="w-1/2 text-left font-instrument font-bold text-gray-700  ">
+                <div className="w-1/2 text-center font-instrument font-bold text-gray-700  ">
                     Tech Stack
                 </div>
                 <h1 className="font-instrument font-bold flex-1">
@@ -58,7 +59,7 @@ const AboutMe = () => {
             </div>
 
             <div className="flex justify-between text-2xl items-center mb-20 w-full">
-                <div className="w-1/2 text-left font-instrument font-bold text-gray-700  ">
+                <div className="w-1/2 text-center font-instrument font-bold text-gray-700 ">
                     LeetCode Profile
                 </div>
                 <h1 className="font-instrument font-bold flex-1">
@@ -66,7 +67,7 @@ const AboutMe = () => {
                 </h1>
             </div>
             <div className="flex justify-between text-2xl items-center mb-20 w-full">
-                <div className="w-1/2 text-left font-instrument font-bold text-gray-700  ">
+                <div className="w-1/2 text-center font-instrument font-bold text-gray-700  ">
                     GitHub Profile
                 </div>
                 <h1 className="font-instrument font-bold flex-1">
@@ -74,7 +75,7 @@ const AboutMe = () => {
                 </h1>
             </div>
             <div className="flex justify-between text-2xl items-center mb-20 w-full">
-                <div className="w-1/2 text-left font-instrument font-bold text-gray-700  ">
+                <div className="w-1/2 text-center font-instrument font-bold text-gray-700  ">
                     Education
                 </div>
                 <h1 className="font-instrument font-bold flex-1">
@@ -86,15 +87,30 @@ const AboutMe = () => {
             </div>
 
             <div className="flex justify-center text-3xl  font-extrabold items-center mb-20 w-full">
-                   Connections and Contribution with me
+                Connections and Contribution with me
             </div>
             <div className="flex gap-5">
-                <ProfileCards profileImage="https://avatars.githubusercontent.com/u/82382156?v=4" username="Thread Ripper" role="SDE-1 S&P Global" workedOn="Chit Chat Web App"/>
-                <ProfileCards profileImage="https://media.licdn.com/dms/image/v2/D5603AQGD3PvL35jW9A/profile-displayphoto-shrink_200_200/B56ZPiFh.hG8Ag-/0/1734664924403?e=2147483647&v=beta&t=5o-7s_u6z3IKwRJkJEEbp1506Q9hsE_bSIOr8jj1vLw" username="Mohammad Shadab" role="System Engg. TCS" workedOn=""/>
-                <ProfileCards profileImage="https://avatars.githubusercontent.com/u/142974436?v=4" username="Mohit Negi" role="Student JSS"
-                 workedOn="Sih,HackJmi"/>
+
+                <ProfileCards profileImage="https://avatars.githubusercontent.com/u/82382156?v=4"
+                              username="Thread Ripper" role="SDE-1 S&P Global" workedOn="Chit Chat Web App"
+                              LinkedIn="https://www.linkedin.com/in/ijlal-ahmad-14aa35202/"
+                              GitHub="https://github.com/Thre4dripper"
+                />
+                <ProfileCards
+                    profileImage="https://media.licdn.com/dms/image/v2/D5603AQGD3PvL35jW9A/profile-displayphoto-shrink_200_200/B56ZPiFh.hG8Ag-/0/1734664924403?e=2147483647&v=beta&t=5o-7s_u6z3IKwRJkJEEbp1506Q9hsE_bSIOr8jj1vLw"
+                    username="Mohammad Shadab" role="System Engg. TCS" workedOn=""
+                    GitHub="https://github.com/Shadab909"
+                   />
+                <ProfileCards profileImage="https://avatars.githubusercontent.com/u/142974436?v=4" username="Mohit Negi"
+                              role="Student JSS"
+                              workedOn="Sih,HackJmi"
+                              LinkedIn="https://www.linkedin.com/in/mohit-negi-232707237/"
+                              GitHub="https://github.com/Mohit251103"
+                />
                 <ProfileCards profileImage="https://swkdu.jpg" username="Shivam" role="Next Gen Founder"
-                              workedOn="nextgenscale.in"/>
+                              workedOn="nextgenscale.in"
+                              LinkedIn="https://www.linkedin.com/in/shivam-tiwari-076bb91bb"
+                              GitHub="https://github.com/Shivamt765"/>
 
             </div>
 

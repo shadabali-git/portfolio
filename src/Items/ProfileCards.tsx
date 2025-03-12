@@ -1,13 +1,16 @@
 import React from 'react';
 import {motion} from "framer-motion";
-import { FaTwitter, FaLinkedinIn, FaInstagram, FaBasketballBall } from 'react-icons/fa';
+import {FaTwitter, FaLinkedinIn, FaGithub} from 'react-icons/fa';
 interface ProfileCardsProps {
     profileImage: string;
     username: string;
     role: string;
     workedOn: string;
+    LinkedIn?:string,
+    Twitter?:string,
+    GitHub?:string
 }
-const ProfileCards:React.FC<ProfileCardsProps> = ({profileImage,username,role,workedOn}) => {
+const ProfileCards:React.FC<ProfileCardsProps> = ({profileImage,username,role,workedOn,LinkedIn,Twitter,GitHub}) => {
     const [fallback, setFallback] = React.useState(profileImage);
     return (
         <div className="max-w-xs mx-auto bg-black rounded-lg shadow-md overflow-hidden text-white">
@@ -29,18 +32,23 @@ const ProfileCards:React.FC<ProfileCardsProps> = ({profileImage,username,role,wo
                 <p className="text-gray-300 mb-4">{role} </p>
                 <p className="text-gray-300 mb-4">{workedOn} </p>
                 <div className="flex justify-start space-x-4">
-                    <a href="/" className="text-gray-300 hover:text-white transition duration-300">
+                    {Twitter &&
+                    <a href={Twitter} target={"_blank"} className="text-gray-300 hover:text-white transition duration-300">
                         <FaTwitter/>
                     </a>
-                    <a href="/" className="text-gray-300 hover:text-white transition duration-300">
+                    }
+                    {LinkedIn &&
+                    <a href={LinkedIn} target={"_blank"} className="text-gray-300 hover:text-white transition duration-300">
                         <FaLinkedinIn/>
                     </a>
-                    <a href="/" className="text-gray-300 hover:text-white transition duration-300">
-                        <FaInstagram/>
-                    </a>
-                    <a href="/" className="text-gray-300 hover:text-white transition duration-300">
-                        <FaBasketballBall/>
-                    </a>
+                    }
+                    {GitHub &&
+                        <a href={GitHub} target={"_blank"}
+                           className="text-gray-300 hover:text-white transition duration-300">
+                            <FaGithub/>
+                        </a>
+                    }
+
                 </div>
             </div>
         </div>

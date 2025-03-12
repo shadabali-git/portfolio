@@ -12,7 +12,7 @@ const WorkCards:React.FC<WorkCardsProps> = ({src,domain,skills,topic,color,proje
     const [fallback, setFallback] = React.useState(src);
     return (
         <motion.div
-            className="relative w-[700px] h-[500px] flex justify-center items-center"
+            className="relative md:w-[700px] md:h-[500px] sm:w-[350px] sm:h-[350px] w-[300px] h-[300px]  flex justify-center items-center"
             initial={{opacity: 0}}
             animate={{opacity: 1}}
             transition={{duration: 0.8}}
@@ -37,7 +37,7 @@ const WorkCards:React.FC<WorkCardsProps> = ({src,domain,skills,topic,color,proje
                  leading-loose
                  cursor-pointer 
                  font-coolvetica-bold tracking-wider whitespace-nowrap
-                 text-7xl overflow-hidden
+                 text-3xl md:text-7xl overflow-hidden
                   z-20 
                   `}
             >

@@ -112,29 +112,33 @@ const Navbar = () => {
             </div>
 
         </nav>
-            {isOpen && <div className="md:hidden bg-black text-white">
+            {isOpen && <div className="md:hidden fixed w-screen h-screen flex flex-col bg-black text-white z-50">
                 <NavLink
                     to="/"
-                    className="group text-white flex flex-col justify-center items-center text-2xl font-medium leading-8 no-underline"
+                    className="group text-white flex flex-col justify-center mb-5 items-center text-2xl font-medium leading-8 no-underline"
+                    onClick={()=>setIsOpen(false)}
                     >
                     Home
                 </NavLink>
                 <NavLink
 
                     to="/about"
-                    className="group text-white flex flex-col justify-center items-center text-2xl font-medium leading-8 no-underline"
+                    className="group text-white flex flex-col justify-center mb-5  items-center text-2xl font-medium leading-8 no-underline"
+                    onClick={()=>setIsOpen(false)}
                     >
                     About
                 </NavLink>
                 <NavLink
                     to="/work"
-                    className="group text-white flex flex-col justify-center items-center text-2xl font-medium leading-8 no-underline"
+                    className="group text-white flex flex-col justify-center mb-5  items-center text-2xl font-medium leading-8 no-underline"
+                    onClick={()=>setIsOpen(false)}
                     >
                     Work
                 </NavLink>
                 <NavLink
                     to="/contact"
-                    className="group text-white flex flex-col justify-center items-center text-2xl font-medium leading-8 no-underline"
+                    className="group text-white flex flex-col justify-center mb-5  items-center text-2xl font-medium leading-8 no-underline"
+                    onClick={()=>setIsOpen(false)}
                     >
                     Contact
                 </NavLink>

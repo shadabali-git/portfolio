@@ -4,6 +4,7 @@ import HomeLayout from "./Design/HomeLayout.tsx";
 import Hero from './components/Hero';
 import AboutMe from "./components/AboutMe.tsx";
 import Work from "./components/Work.tsx";
+import Contact from "./components/Contact.tsx";
 
 const App: React.FC = () => {
     return (
@@ -13,7 +14,7 @@ const App: React.FC = () => {
                     <Route index element={<Hero/>}/>
                     <Route path="/about" element={<AboutMe/>}/>
                     <Route path="/work" element={<Work/>}/>
-                    <Route path="/contact" element={<h2 className="text-white"> Under Work </h2>}/>
+                    <Route path="/contact" element={<Contact/>}/>
                 </Route>
                 <Route path="*" element={<h2> Not Found </h2>}/>
             </Routes>

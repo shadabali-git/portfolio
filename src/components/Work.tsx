@@ -19,7 +19,7 @@ const Work = () => {
                  hover:rotate-z-3
                  cursor-pointer 
                  font-coolvetica-bold word-spacing-10 tracking-wider whitespace-nowrap text-ellipsis
-                 text-[250px] sm:text-[350px] md:text-[490px] overflow-hidden
+                 text-[100px] sm:text-[250px] md:text-[490px] overflow-hidden
                   z-20 
                   `}
                 initial={{rotateX: 0, textShadow: "5px 5px 10px rgba(255,255,255,0.5)"}}

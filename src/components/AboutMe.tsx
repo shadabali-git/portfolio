@@ -16,7 +16,7 @@ const AboutMe = () => {
                  hover:rotate-z-3
                  cursor-pointer 
                  font-coolvetica-bold word-spacing-10 tracking-wider whitespace-nowrap text-ellipsis
-                 text-[250px] sm:text-[350px] md:text-[490px] overflow-hidden
+                 text-[100px] sm:text-[350px] md:text-[490px] overflow-hidden
                   z-20 
                   `}
                 initial={{rotateZ: 0, textShadow: "5px 5px 10px rgba(255,255,255,0.5)"}}
@@ -30,8 +30,8 @@ const AboutMe = () => {
                 ABOUT
             </motion.h1>
 
-            <div className="flex justify-between text-2xl items-center mb-20 w-full mx-auto">
-                <div className="w-1/2 text-center font-bold text-gray-700 font-instrument ">
+            <div className="flex justify-between text-sm  md:text-2xl items-center mb-20 w-full mx-auto">
+                <div className="w-1/2 md:text-center  font-bold text-gray-700 font-instrument ">
                     Name
                 </div>
                 <h1 className="font-instrument font-bold flex-1">
@@ -39,8 +39,8 @@ const AboutMe = () => {
                 </h1>
             </div>
 
-            <div className="flex justify-between text-2xl items-center mb-20 w-full">
-                <div className="w-1/2 text-center font-instrument font-bold text-gray-700  ">
+            <div className="flex justify-between text-sm  md:text-2xl items-center mb-20 w-full">
+                <div className="w-1/2 md:text-center  font-instrument font-bold text-gray-700  ">
                     Bio
                 </div>
                 <h1 className="font-instrument font-bold flex-1">
@@ -48,8 +48,8 @@ const AboutMe = () => {
                     technologies and building cool projects.
                 </h1>
             </div>
-            <div className="flex justify-between text-2xl items-center mb-20 w-full">
-                <div className="w-1/2 text-center font-instrument font-bold text-gray-700  ">
+            <div className="flex justify-between text-sm  md:text-2xl items-center mb-20 w-full">
+                <div className="w-1/2 md:text-center  font-instrument font-bold text-gray-700  ">
                     Tech Stack
                 </div>
                 <h1 className="font-instrument font-bold flex-1">
@@ -58,38 +58,38 @@ const AboutMe = () => {
                 </h1>
             </div>
 
-            <div className="flex justify-between text-2xl items-center mb-20 w-full">
-                <div className="w-1/2 text-center font-instrument font-bold text-gray-700 ">
+            <div className="flex justify-between text-sm  md:text-2xl items-center mb-20 w-full">
+                <div className="w-1/2 md:text-center  font-instrument font-bold text-gray-700 ">
                     LeetCode Profile
                 </div>
                 <h1 className="font-instrument font-bold flex-1">
                     <a href="https://leetcode.com/u/shadabali_112/" target="_blank">Leet Code</a>
                 </h1>
             </div>
-            <div className="flex justify-between text-2xl items-center mb-20 w-full">
-                <div className="w-1/2 text-center font-instrument font-bold text-gray-700  ">
+            <div className="flex justify-between text-sm  md:text-2xl items-center mb-20 w-full">
+                <div className="w-1/2 md:text-center  font-instrument font-bold text-gray-700  ">
                     GitHub Profile
                 </div>
                 <h1 className="font-instrument font-bold flex-1">
                     <a href="https://github.com/shadabali-git" target="_blank"> Git Hub</a>
                 </h1>
             </div>
-            <div className="flex justify-between text-2xl items-center mb-20 w-full">
-                <div className="w-1/2 text-center font-instrument font-bold text-gray-700  ">
+            <div className="flex justify-between text-sm  md:text-2xl items-center mb-20 w-full">
+                <div className="w-1/2 md:text-center  font-instrument font-bold text-gray-700  ">
                     Education
                 </div>
-                <h1 className="font-instrument font-bold flex-1">
+                <div className="font-instrument font-bold flex-1">
                     <h2> B.Tech in Information Technology <br/> <span className="text-gray-700"> JSS Academy of Technical Education, Noida</span>
                     </h2>
                     <h2>Diploma in Computer Science <br/> <span className="text-gray-700">Jamia Millia Islamia, New Delhi </span>
                     </h2>
-                </h1>
+                </div>
             </div>
 
-            <div className="flex justify-center text-3xl  font-extrabold items-center mb-20 w-full">
-                Connections and Contribution with me
+            <div className="flex justify-center text-xl md:text-3xl  font-extrabold items-center mb-20 w-full">
+                Connections and Contribution  with me
             </div>
-            <div className="flex gap-5">
+            <div className="flex gap-5 flex-wrap">
 
                 <ProfileCards profileImage="https://avatars.githubusercontent.com/u/82382156?v=4"
                               username="Thread Ripper" role="SDE-1 S&P Global" workedOn="Chit Chat Web App"
@@ -107,7 +107,7 @@ const AboutMe = () => {
                               LinkedIn="https://www.linkedin.com/in/mohit-negi-232707237/"
                               GitHub="https://github.com/Mohit251103"
                 />
-                <ProfileCards profileImage="https://swkdu.jpg" username="Shivam" role="Next Gen Founder"
+                <ProfileCards profileImage={"https://avatars.githubusercontent.com/u/89742928?v=4"} username="Shivam" role="Next Gen Founder"
                               workedOn="nextgenscale.in"
                               LinkedIn="https://www.linkedin.com/in/shivam-tiwari-076bb91bb"
                               GitHub="https://github.com/Shivamt765"/>

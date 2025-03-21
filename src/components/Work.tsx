@@ -30,7 +30,7 @@ const Work = () => {
                     perspective: 1000,
                 }}
             >
-               Work
+               WORK
             </motion.h1>
 
             <div className="flex gap-5 flex-wrap justify-center">
@@ -41,7 +41,7 @@ const Work = () => {
                 skills="React Tailwind Firebase"
                 topic="Chat Application"
                 color="bg-blue-500"
-                projectLink="https://pr-24.d12opzx0r1e6rj.amplifyapp.com"
+                projectLink="https://chit-chat.ijlalahmad.tech"
 
 
             />

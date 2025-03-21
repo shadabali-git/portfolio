@@ -3,12 +3,11 @@ import {NavLink,Link} from "react-router";
 import {useState} from "react";
 import { HiOutlineMenu ,HiOutlineMenuAlt3} from "react-icons/hi";
 
-
 const Navbar = () => {
        const [isOpen, setIsOpen] = useState(false);
     return (
-        <div>
-        <nav className="px-10 bg-black h-20 flex justify-between items-center font-sans">
+        <div className="border-none bg-gradient-to-br from-white via-black via-black to-gray-900 ">
+        <nav className="px-10 h-20 flex justify-between items-center font-sans">
             <Link to="/" className="w-20 mt-4">
                 <img src={logo} alt="shady" className="object-fill"/>
             </Link>
@@ -112,7 +111,10 @@ const Navbar = () => {
             </div>
 
         </nav>
-            {isOpen && <div className="md:hidden fixed w-screen h-screen flex flex-col bg-black text-white z-50">
+            {isOpen && <div className="md:hidden fixed w-screen h-screen flex flex-col bg-black text-white z-50"
+                            style={{
+                                opacity: 0.4, filter: "blur(10px)"
+                            }}>
                 <NavLink
                     to="/"
                     className="group text-white flex flex-col justify-center mb-5 items-center text-2xl font-medium leading-8 no-underline"

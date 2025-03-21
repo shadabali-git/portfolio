@@ -13,19 +13,14 @@ const AboutMe = () => {
             <motion.h1
                 className={`
                  leading-tight
-                 hover:rotate-z-3
                  cursor-pointer 
                  font-coolvetica-bold word-spacing-10 tracking-wider whitespace-nowrap text-ellipsis
                  text-[100px] sm:text-[350px] md:text-[490px] overflow-hidden
                   z-20 
                   `}
-                initial={{rotateZ: 0, textShadow: "5px 5px 10px rgba(255,255,255,0.5)"}}
-                animate={{rotateZ: 360, textShadow: "10px 10px 20px rgba(255,255,255,0.8)"}}
-                transition={{duration: 1, ease: "easeInOut"}}
-                style={{
-                    transformStyle: "preserve-3d",
-                    perspective: 1000,
-                }}
+                initial={{color:'black', textShadow: "0px 0px 0px rgba(255,255,255,0.5)"}}
+                animate={{color:'rgba(255,255,255,0.2)', textShadow: "10px 10px 20px rgba(255,255,255,0.8)"}}
+                transition={{duration: 2, ease: "easeInOut"}}
             >
                 ABOUT
             </motion.h1>
@@ -55,23 +50,6 @@ const AboutMe = () => {
                 <h1 className="font-instrument font-bold flex-1">
                     React, Node, Express, MongoDB, TailwindCSS, Framer Motion, TypeScript ,HTML5, CSS3, JavaScript ,MUI
                     ,Redux,Zustand etc.
-                </h1>
-            </div>
-
-            <div className="flex justify-between text-sm  md:text-2xl items-center mb-20 w-full">
-                <div className="w-1/2 md:text-center  font-instrument font-bold text-gray-700 ">
-                    LeetCode Profile
-                </div>
-                <h1 className="font-instrument font-bold flex-1">
-                    <a href="https://leetcode.com/u/shadabali_112/" target="_blank">Leet Code</a>
-                </h1>
-            </div>
-            <div className="flex justify-between text-sm  md:text-2xl items-center mb-20 w-full">
-                <div className="w-1/2 md:text-center  font-instrument font-bold text-gray-700  ">
-                    GitHub Profile
-                </div>
-                <h1 className="font-instrument font-bold flex-1">
-                    <a href="https://github.com/shadabali-git" target="_blank"> Git Hub</a>
                 </h1>
             </div>
             <div className="flex justify-between text-sm  md:text-2xl items-center mb-20 w-full">

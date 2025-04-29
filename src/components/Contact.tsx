@@ -14,8 +14,7 @@ const Contact = () => {
             mx-auto
             
        `}>
-            <h1 className="text-2xl font-instrument font-bold"> Platform </h1>
-            <div className="flex flex-wrap gap-10 p-4">
+            <div className="flex flex-wrap gap-10 p-4 items-center justify-center mt-10">
             <motion.a className={`w-56 h-56 flex justify-center items-center bg-white rounded-full text-black cursor-pointer hover:text-amber-950`}>
                 <SiCodechef className="w-24 h-24"/>
             </motion.a>

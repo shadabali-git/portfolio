@@ -32,10 +32,13 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Shadab Ali - B.Tech Computer Science Portfolio",
         description: "Interactive portfolio showcasing skills, projects, and achievements in computer science and software development.",
-    },
-    viewport: "width=device-width, initial-scale=1, maximum-scale=1",
-    robots: "index, follow",
-    generator: 'shadab ali'
+    }
+}
+
+export const viewport = {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1
 }
 export default function RootLayout({
   children,

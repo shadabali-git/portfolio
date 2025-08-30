@@ -46,6 +46,22 @@ export default function PortfolioSection({ section, data }: PortfolioSectionProp
     )
 }
 
+const colors = [
+    "bg-red-200 text-red-800 dark:bg-red-800 dark:text-red-200",
+    "bg-blue-200 text-blue-800 dark:bg-blue-800 dark:text-blue-200",
+    "bg-green-200 text-green-800 dark:bg-green-800 dark:text-green-200",
+    "bg-yellow-200 text-yellow-800 dark:bg-yellow-800 dark:text-yellow-200",
+    "bg-purple-200 text-purple-800 dark:bg-purple-800 dark:text-purple-200",
+    "bg-pink-200 text-pink-800 dark:bg-pink-800 dark:text-pink-200",
+    "bg-indigo-200 text-indigo-800 dark:bg-indigo-800 dark:text-indigo-200",
+    "bg-orange-200 text-orange-800 dark:bg-orange-800 dark:text-orange-200",
+    "bg-teal-200 text-teal-800 dark:bg-teal-800 dark:text-teal-200",
+    "bg-cyan-200 text-cyan-800 dark:bg-cyan-800 dark:text-cyan-200",
+    "bg-lime-200 text-lime-800 dark:bg-lime-800 dark:text-lime-200",
+    "bg-rose-200 text-rose-800 dark:bg-rose-800 dark:text-rose-200",
+];
+
+
 function HomeSection({ data }: { data: any }) {
     return (
         <div className="text-center space-y-8">
@@ -67,7 +83,7 @@ function HomeSection({ data }: { data: any }) {
                     <Badge
                         key={index}
                         variant="secondary"
-                        className="text-sm py-2 px-4 bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-slate-200"
+                        className={`text-sm py-2 px-4 ${colors[index % colors.length]}`}
                     >
                         {skill}
                     </Badge>
@@ -82,7 +98,7 @@ function AboutSection({ data }: { data: any }) {
         <div className="space-y-8">
             <h2 className="text-4xl font-bold text-slate-900 dark:text-slate-100 mb-8">About Me</h2>
 
-            <Card className="bg-slate-100 dark:bg-slate-800 border-slate-200 dark:border-slate-700">
+            <Card className="bg-gradient-to-tl hover:from-slate-400 via-slate-200 to-white dark:from-slate-700 dark:via-slate-800 dark:to-slate-600 dark:bg-slate-800 border-slate-200 dark:border-slate-700 transition-all duration-300">
                 <CardContent className="p-8">
                     <p className="text-slate-700 dark:text-slate-300 text-lg leading-relaxed mb-6">{data.bio}</p>
 
@@ -111,7 +127,7 @@ function AboutSection({ data }: { data: any }) {
                                                 <Badge
                                                     key={skillIndex}
                                                     variant="outline"
-                                                    className="text-xs border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300"
+                                                    className={`text-sm py-2 px-4 ${colors[index % colors.length]}`}
                                                 >
                                                     {skill}
                                                 </Badge>
@@ -141,12 +157,12 @@ function ProjectsSection({ data }: { data: any }) {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: index * 0.1 }}
                     >
-                        <Card className="bg-slate-100 dark:bg-slate-800 border-slate-200 dark:border-slate-700 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all duration-300">
+                        <Card className="bg-gradient-to-tl hover:from-purple-200 via-white to-white dark:from-slate-700 dark:via-slate-800 dark:to-slate-600 dark:bg-slate-800 border-slate-200 dark:border-slate-700 transition-all duration-300">
                             <CardHeader>
                                 <div className="flex justify-between items-start">
                                     <div>
                                         <CardTitle className="text-slate-900 dark:text-slate-100 text-xl">{project.name}</CardTitle>
-                                        <p className="text-slate-600 dark:text-slate-400 mt-2">{project.description}</p>
+                                        <p className="text-slate-600 dark:text-slate-100/50 mt-2">{project.description}</p>
                                     </div>
                                     <div className="flex gap-2">
                                         {project.github && (
@@ -210,16 +226,31 @@ function AchievementsSection({ data }: { data: any }) {
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ delay: index * 0.1 }}
                     >
-                        <Card className="bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-700 dark:to-slate-800 border-slate-300 dark:border-slate-600">
+                        <Card className="bg-gradient-to-tl hover:from-orange-200 via-white to-white dark:from-slate-700 dark:via-slate-800 dark:to-slate-600 dark:bg-slate-800 border-slate-200 dark:border-slate-700 cursor-pointer">
                             <CardHeader>
                                 <CardTitle className="text-slate-900 dark:text-slate-100 flex items-center gap-2">
                                     <span className="text-2xl">{achievement.icon}</span>
                                     {achievement.title}
                                 </CardTitle>
                             </CardHeader>
-                            <CardContent>
-                                <p className="text-slate-700 dark:text-slate-300 mb-2">{achievement.description}</p>
-                                <p className="text-sm text-slate-600 dark:text-slate-400">{achievement.date}</p>
+                            <CardContent className="space-y-3">
+                                <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
+                                    {achievement.description}
+                                </p>
+
+                                <div className="flex items-center justify-between text-sm text-slate-600 dark:text-slate-400">
+                                    <span className="italic">{achievement.date}</span>
+                                    {achievement.link && (
+                                        <a
+                                            href={achievement.link}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-blue-600 dark:text-blue-400 hover:underline font-medium"
+                                        >
+                                            View
+                                        </a>
+                                    )}
+                                </div>
                             </CardContent>
                         </Card>
                     </motion.div>
@@ -266,7 +297,7 @@ function ProfilesSection({ data }: { data: any }) {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: index * 0.1 }}
                     >
-                        <Card className="bg-slate-100 dark:bg-slate-800 border-slate-200 dark:border-slate-700 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all duration-300 group">
+                        <Card className={`${platform.color} border-slate-200 dark:from-slate-700 dark:to-slate-600 dark:bg-slate-800 dark:border-slate-700 transition-all duration-300 group`}>
                             <CardHeader className="pb-3">
                                 <div className="flex items-center gap-3">
                                     <div className="p-2 bg-slate-200 dark:bg-slate-700 rounded-lg group-hover:bg-slate-300 dark:group-hover:bg-slate-600 transition-colors">
@@ -309,7 +340,7 @@ function EducationSection({ data }: { data: any }) {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: index * 0.1 }}
                     >
-                        <Card className="bg-slate-100 dark:bg-slate-800 border-slate-200 dark:border-slate-700 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all duration-300">
+                        <Card className="bg-gradient-to-tl hover:from-green-200 via-white to-white border-slate-200 dark:from-slate-700 dark:to-slate-600 dark:via-slate-800 dark:bg-slate-800 dark:border-slate-700 transition-all transition-all duration-300">
                             <CardHeader>
                                 <CardTitle className="text-slate-900 dark:text-slate-100 text-xl">{edu.institution}</CardTitle>
                                 <p className="text-slate-600 dark:text-slate-400 text-sm">{edu.period}</p>

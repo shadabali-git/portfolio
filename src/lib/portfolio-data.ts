@@ -11,7 +11,7 @@ export const portfolioData = {
             "Tailwind",
             "Bootstrap",
             "Material UI",
-            "Sat-CN",
+            "Shad-CN",
             "Next.js",
             "Render",
             "Git",
@@ -20,15 +20,17 @@ export const portfolioData = {
             "Postman",
             "TypeScript",
             "JavaScript",
-            "SQL",
+            "MYSQL",
             "HTML",
             "Java Core",
             "MongoDB",
-            "Socket.io",
+            "Socket.IO",
             "Ubuntu",
+            "AWS",
             "EC2",
             "Vercel",
             "Docker",
+            "DBMS"
         ],
     },
 
@@ -53,7 +55,7 @@ export const portfolioData = {
         skillCategories: [
             {
                 name: "Frontend",
-                skills: ["React.js", "TypeScript", "Next.js", "Tailwind CSS", "Bootstrap", "Material UI"],
+                skills: ["React.js", "TypeScript", "Next.js", "Tailwind CSS", "Bootstrap", "Material UI","Shad CN"],
             },
             {
                 name: "Backend",
@@ -61,7 +63,7 @@ export const portfolioData = {
             },
             {
                 name: "Database",
-                skills: ["SQL", "MongoDB"],
+                skills: ["MYSQL", "MongoDB"],
             },
             {
                 name: "DevOps & Tools",
@@ -79,30 +81,30 @@ export const portfolioData = {
             {
                 name: "Chat Web Application",
                 description: "A web version of a chat application with real-time messaging capabilities.",
-                technologies: ["React.js", "Node.js", "Socket.io", "MongoDB"],
-                github: "", // Add if available
-                demo: "", // Add if available
+                technologies: ["React.js", "Git","Github & Action", "Firebase", "Zustand"],
+                github: "https://github.com/shadabali-git/Chit-Chat-WebApp", // Add if available
+                demo: "https://chit-chat-web-app-six.vercel.app/", // Add if available
             },
             {
                 name: "Late Sheet",
                 description: "A progress tracker app for managing tasks and deadlines.",
-                technologies: ["React.js", "TypeScript", "Next.js"],
-                github: "",
-                demo: "",
+                technologies: ["React.js", "TypeScript", "Node Js","Jwt & OAuth"],
+                github: "https://github.com/shadabali-git/LeetCodeTool",
+                demo: "https://leetsheet.shadab.works/",
             },
             {
                 name: "Music Floats",
                 description: "A music-focused app inspired by Instagram Reels for music discovery and sharing.",
                 technologies: ["React.js", "Node.js"],
-                github: "",
-                demo: "",
+                github: "https://github.com/shadabali-git/Float_Music_Reels",
+                demo: "https://float-music-reels.vercel.app/",
             },
             {
-                name: "SafeWay",
-                description: "Android app for automatic vehicle accident detection and messaging system.",
-                technologies: ["Android", "Java"],
-                github: "",
-                demo: "",
+                name: "Examination platform",
+                description: "A website where teachers and students can share information. Teachers can also create MCQ-based tests for students, which are publicly available to all students using their name and Google sign-in. The system supports real-time checking of MCQs with answers.",
+                technologies: ["Next Js", "Supabase","Socket.IO","Goggle Auth"],
+                github: "https://github.com/shadabali-git/Exam-Test-Platform",
+                demo: "https://exam-test-platform-git-master-shadaab-alis-projects.vercel.app/",
             },
         ],
     },
@@ -114,30 +116,42 @@ export const portfolioData = {
                 description: "Certified React front-end developer.",
                 date: "2023",
                 icon: "🎓",
+                link:"https://www.hackerrank.com/certificates/iframe/f950e956d17a"
+            },
+            {
+                title: "Publication in Computer Science",
+                description: "Published research in Computer Science journal in 2023.",
+                date: "Under the guidance of Dr. Sunnil at Jamia Millia Islamia",
+                icon: "📚",
+                link:"https://www.ijcseonline.org/full_spl_paper_view.php?paper_id=1426"
+            },
+            {
+                title: "500+ LeetCode Questions Solved",
+                description: "Achieved over 500 solved coding problems on LeetCode.",
+                date: "2023-2025",
+                icon: "🧠",
+                link:"https://leetcode.com/u/shadabali_112/"
+            },
+            {
+                title: "Code Coach - 2nd Star",
+                description: "Recognized for consistent programming skill improvements.",
+                date: "17+ contest",
+                icon: "⭐",
+                link:"https://www.codechef.com/users/shadddyy"
+            },
+            {
+                title: "HackJMI Participant",
+                description: "Participated in HackJMI hackathon at Jamia Millia Islamia. Built MockMate, a platform for technical mock interviews with expert interviewers.",
+                date: "2024",
+                icon: "💻",
+                link: "https://drive.google.com/file/d/1opZ3flZYwopovwIWnovemjE3v0DoIYRK/view"
             },
             {
                 title: "Top 100 Participant",
                 description: "Ranked in the top 100 participants in a programming contest.",
                 date: "2023",
                 icon: "🏅",
-            },
-            {
-                title: "Publication in Computer Science",
-                description: "Published research in Computer Science journal in 2023.",
-                date: "2023",
-                icon: "📚",
-            },
-            {
-                title: "500+ LeetCode Questions Solved",
-                description: "Achieved over 500 solved coding problems on LeetCode.",
-                date: "2024",
-                icon: "💻",
-            },
-            {
-                title: "Code Coach - 2nd Star",
-                description: "Recognized for consistent programming skill improvements.",
-                date: "2024",
-                icon: "⭐",
+                link:""
             },
         ],
     },
@@ -168,6 +182,7 @@ export const portfolioData = {
                     "Computer Networks",
                     "Java Core",
                     "Advanced Data Structures and Algorithms",
+                    "Machine Learning"
                 ],
             },
             {
@@ -188,54 +203,63 @@ export const portfolioData = {
                 url: "https://www.linkedin.com/in/shadabali-linked/",
                 icon: "linkedin",
                 description: "Professional network and career updates",
+                color:"bg-gradient-to-tl hover:bg-sky-600 to-white"
             },
             {
                 name: "GitHub",
                 url: "https://github.com/shadabali-git/",
                 icon: "github",
                 description: "Open source contributions and personal projects",
+                color:"bg-gradient-to-tl hover:bg-gray-800 to-white",
             },
             {
                 name: "Twitter",
                 url: "https://x.com/ShadabAli_tweet",
                 icon: "twitter",
                 description: "Tech thoughts and industry insights",
+                color:"bg-gradient-to-tl hover:bg-gray-800 to-white",
             },
             {
                 name: "LeetCode",
                 url: "https://leetcode.com/u/shadabali_112/",
                 icon: "code",
                 description: "Problem solving and algorithm challenges",
+                color:"bg-gradient-to-tl hover:bg-amber-600 to-white",
             },
             {
                 name: "Coding Ninjas",
                 url: "https://www.naukri.com/code360/profile/ShadabAli_CN",
                 icon: "code",
                 description: "Competitive programming and tutorials",
+                color:"bg-gradient-to-tl hover:bg-yellow-300 to-white"
             },
             {
                 name: "GeeksforGeeks",
                 url: "https://www.geeksforgeeks.org/user/shadddyy/",
                 icon: "code",
                 description: "Articles and coding practice",
+                color:"bg-gradient-to-tl hover:bg-emerald-600 to-white"
             },
             {
                 name: "CodeChef",
                 url: "https://www.codechef.com/users/shadddyy",
                 icon: "trophy",
                 description: "Competitive programming contests",
+                color:"bg-gradient-to-tl hover:bg-amber-800 to-white"
             },
             {
                 name: "HackerEarth",
                 url: "https://www.hackerearth.com/@shad46243/",
                 icon: "code",
                 description: "Programming contests and hackathons",
+                color:"bg-gradient-to-tl hover:bg-blue-600 to-white",
             },
             {
                 name: "HackerRank",
                 url: "https://www.hackerrank.com/profile/shad46243",
                 icon: "code",
                 description: "Coding challenges and certifications",
+                color:"bg-gradient-to-tl hover:bg-green-300 to-white"
             },
         ],
     },

@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@theme {
+  /* ---- Color tokens ---- */
+  --color-base: #050507;
+  --color-base-raised: #0b0b0f;
+  --color-surface: rgba(255, 255, 255, 0.035);
+  --color-surface-hover: rgba(255, 255, 255, 0.06);
+  --color-border: rgba(255, 255, 255, 0.09);
+  --color-border-strong: rgba(255, 255, 255, 0.16);
+
+  --color-ink: #e7e7ec;
+  --color-ink-muted: #8d8d99;
+  --color-ink-faint: #56565f;
+
+  --color-indigo: #6366f1;
+  --color-indigo-soft: #818cf8;
+  --color-emerald: #10b981;
+  --color-emerald-soft: #34d399;
+  --color-amber: #f59e0b;
+
+  /* ---- Type ---- */
+  --font-display: "Space Grotesk", "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", monospace;
+
+  /* ---- Radius ---- */
+  --radius-card: 1.1rem;
+  --radius-chip: 0.5rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-base);
+  color: var(--color-ink);
+  font-family: var(--font-display);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: var(--color-indigo);
+  color: #fff;
+}
+
+/* Focus ring visible on keyboard nav, invisible on mouse */
+:focus-visible {
+  outline: 2px solid var(--color-indigo-soft);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Ambient background rays used behind the hero */
+.ambient-glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(600px circle at 15% 10%, rgba(99, 102, 241, 0.16), transparent 60%),
+    radial-gradient(500px circle at 85% 25%, rgba(16, 185, 129, 0.1), transparent 55%);
+}
+
+.glass-panel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.glass-panel:hover {
+  background: var(--color-surface-hover);
+  border-color: var(--color-border-strong);
+}
+
+/* Thin scrollbar for the terminal + drawer */
+.thin-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.thin-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

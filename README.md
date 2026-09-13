@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Shadab Ali — Portfolio
 
-## Getting Started
+A Next.js 15 (App Router) portfolio built with TypeScript, Tailwind CSS v4, and Framer Motion.
 
-First, run the development server:
+## Features
+
+- Glassmorphism / bento-grid layout on a deep obsidian base
+- Animated hero with a scripted terminal widget
+- `Cmd/Ctrl + K` command palette to jump to any section, project, or social profile
+- Interactive experience timeline
+- Filterable skill chips (Frontend / Distributed Backend / DevOps & Cloud / Core CS)
+- Project cards that open a slide-in drawer with full write-ups, stack, and links
+
+## Getting started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+app/
+  layout.tsx          Root layout, fonts, metadata
+  page.tsx            Page composition
+  globals.css         Design tokens (Tailwind v4 @theme) + global styles
+components/
+  site-header.tsx      Floating nav + command palette trigger
+  hero-section.tsx      Hero with status pill, CTAs, terminal widget
+  terminal-widget.tsx   Scripted terminal animation
+  experience-timeline.tsx
+  bento-grid.tsx         Metrics, filterable skills, achievements, education
+  project-card.tsx       Project grid + drawer trigger
+  project-drawer.tsx     Radix-powered slide-in project detail drawer
+  command-palette.tsx    cmdk-powered Cmd+K palette
+  site-footer.tsx
+lib/
+  portfolio-data.ts    Single typed source of truth for all content
+  utils.ts             cn() classname helper
+```
 
-## Learn More
+## Before you deploy
 
-To learn more about Next.js, take a look at the following resources:
+- Drop an actual `resume.pdf` into `public/` — the hero's "Resume" link currently points at `/resume.pdf`.
+- Update `metadataBase` in `app/layout.tsx` if the production domain differs.
+- All content (experience, projects, links, stats) lives in `lib/portfolio-data.ts` — edit that one file to update the whole site.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Next.js 15 · React 19 · TypeScript · Tailwind CSS v4 · Framer Motion · Radix UI (Dialog) · cmdk · lucide-react
